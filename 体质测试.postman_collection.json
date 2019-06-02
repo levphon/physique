@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "306f3bf1-6792-4a1a-8554-db6c35d9ffce",
+		"name": "体质测试",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "查询问题接口，带分页",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8888/question/search?pageNum=1&pageSize=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"question",
+						"search"
+					],
+					"query": [
+						{
+							"key": "pageNum",
+							"value": "1",
+							"description": "当前页数"
+						},
+						{
+							"key": "pageSize",
+							"value": "1",
+							"description": "一页条数"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取全部问题接口",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8888/question/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"question",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "根据问题id获取问题选项接口",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8888/questionoption/listByQuestionId?questionId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"questionoption",
+						"listByQuestionId"
+					],
+					"query": [
+						{
+							"key": "questionId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
