@@ -12,20 +12,19 @@ public class UserService {
     @Resource
     private UserMapper mapper;
 
-
-    int insert(User record) {
+    int save(User record) {
         return mapper.insert(record);
     }
 
-    User selectByPrimaryKey(String id) {
+    User getById(String id) {
         return mapper.selectByPrimaryKey(id);
     }
 
-    int updateByPrimaryKey(User record) {
+    int update(User record) {
         return mapper.updateByPrimaryKey(record);
     }
 
-    int deleteByPrimaryKey(String id) {
+    int deleteById(String id) {
         return mapper.deleteByPrimaryKey(id);
     }
 

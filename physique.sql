@@ -63,6 +63,47 @@ create table pts_user_test_option(
   update_time datetime on update current_timestamp comment '更新时间'
 ) comment '回答表';
 
+drop table if exists pts_physique;
+create table pts_physique(
+                             id int auto_increment primary key ,
+                             name varchar(100) comment '体质名称',
+                             general_characteristics varchar(300) comment '总体特征',
+                             physical_characteristics varchar(300) comment '形体特征',
+                             common_performance varchar(300) comment '常见表现',
+                             psychological_characteristics varchar(300) comment '心理特征',
+                             incidence varchar(300) comment '发病倾向',
+                             adaptability_external_environment varchar(300) comment '对外界环境适应能力',
+                             enable_status tinyint(2) default 0 comment '启用状态：0启用，1停用',
+                             delete_status tinyint(2) default 0 comment '删除状态：0未删除，1删除',
+                             create_time datetime comment '创建时间',
+                             update_time datetime on update current_timestamp comment '更新时间'
+) comment '体质表';
+
+drop table if exists pts_physique_nurse;
+create table pts_physique_nurse (
+                                    id int auto_increment primary key ,
+                                    physique_id int comment '体质id',
+                                    name varchar(100) comment '方式名称',
+                                    content varchar(1000) comment '调养方式',
+                                    sort int(3) comment '排序',
+                                    enable_status tinyint(2) default 0 comment '启用状态：0启用，1停用',
+                                    delete_status tinyint(2) default 0 comment '删除状态：0未删除，1删除',
+                                    create_time datetime comment '创建时间',
+                                    update_time datetime on update current_timestamp comment '更新时间'
+) comment '体质调养方式表';
+
+drop table if exists pts_physique_pic;
+create table pts_physique_pic(
+                                 id int auto_increment primary key,
+                                 physique_id int comment '体质id',
+                                 pic_url varchar(300) comment '图片链接',
+                                 sort int(3) comment '排序',
+                                 enable_status tinyint(2) default 0 comment '启用状态：0启用，1停用',
+                                 delete_status tinyint(2) default 0 comment '删除状态：0未删除，1删除',
+                                 create_time datetime comment '创建时间',
+                                 update_time datetime on update current_timestamp comment '更新时间'
+) comment '体质相关图片表';;
+
 insert into pts_question(question, remark, sort, create_time, update_time) values ('您精力充沛吗？','指精神头足，乐于做事',1,sysdate(),sysdate());
 insert into pts_question(question, remark, sort, create_time, update_time) values ('您容易疲乏吗？','指体力如何，是否稍微活动一下或做一点家务劳动就感到累',2,sysdate(),sysdate());
 insert into pts_question(question, remark, sort, create_time, update_time) values ('您容易气短，呼吸短促，接不上气吗？',null,3,sysdate(),sysdate());
@@ -107,3 +148,4 @@ insert into pts_question_option(question_id, `option`, score, remark, sort, crea
 select id,'经常（相当/多数时间）',4,null,4,sysdate(),sysdate() from pts_question;
 insert into pts_question_option(question_id, `option`, score, remark, sort, create_time, update_time)
 select id,'总是（非常/每天）',5,null,5,sysdate(),sysdate() from pts_question;
+

@@ -1,9 +1,14 @@
 package com.hflw.physique.common.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
+@Setter
+@Getter
 @MappedSuperclass
 public class BaseEntity implements Serializable {
 
@@ -30,71 +35,5 @@ public class BaseEntity implements Serializable {
      */
     @Column(name = "update_time")
     private Date updateTime;
-
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Byte getEnableStatus() {
-        return enableStatus;
-    }
-
-    public void setEnableStatus(Byte enableStatus) {
-        this.enableStatus = enableStatus;
-    }
-
-    public Byte getDeleteStatus() {
-        return deleteStatus;
-    }
-
-    public void setDeleteStatus(Byte deleteStatus) {
-        this.deleteStatus = deleteStatus;
-    }
-
-    /**
-     * 获取创建时间
-     *
-     * @return create_time - 创建时间
-     */
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    /**
-     * 设置创建时间
-     *
-     * @param createTime 创建时间
-     */
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    /**
-     * 获取更新时间
-     *
-     * @return update_time - 更新时间
-     */
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    /**
-     * 设置更新时间
-     *
-     * @param updateTime 更新时间
-     */
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
 
 }

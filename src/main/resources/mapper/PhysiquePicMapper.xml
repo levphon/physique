@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hflw.physique.mapper.PhysiquePicMapper">
+    <resultMap id="BaseResultMap" type="com.hflw.physique.domain.PhysiquePic">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="physique_id" property="physiqueId" jdbcType="INTEGER"/>
+        <result column="pic_url" property="picUrl" jdbcType="VARCHAR"/>
+        <result column="sort" property="sort" jdbcType="INTEGER"/>
+        <result column="enable_status" property="enableStatus" jdbcType="TINYINT"/>
+        <result column="delete_status" property="deleteStatus" jdbcType="TINYINT"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="listByPhysiqueId" resultType="com.hflw.physique.domain.PhysiquePic">
+        select * from pts_physique_pic where physique_id = #{physiqueId} order by sort
+    </select>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hflw.physique.mapper.PhysiqueMapper" >
+  <resultMap id="BaseResultMap" type="com.hflw.physique.domain.Physique" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="general_characteristics" property="generalCharacteristics" jdbcType="VARCHAR" />
+    <result column="physical_characteristics" property="physicalCharacteristics" jdbcType="VARCHAR" />
+    <result column="common_performance" property="commonPerformance" jdbcType="VARCHAR" />
+    <result column="psychological_characteristics" property="psychologicalCharacteristics" jdbcType="VARCHAR" />
+    <result column="incidence" property="incidence" jdbcType="VARCHAR" />
+    <result column="adaptability_external_environment" property="adaptabilityExternalEnvironment" jdbcType="VARCHAR" />
+    <result column="enable_status" property="enableStatus" jdbcType="TINYINT" />
+    <result column="delete_status" property="deleteStatus" jdbcType="TINYINT" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>
