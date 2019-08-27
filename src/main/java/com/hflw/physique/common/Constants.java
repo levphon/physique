@@ -25,4 +25,10 @@ public class Constants {
      */
     public static final String IS_ASC = "isAsc";
 
+    /**
+     * openid类型
+     */
+    public static final int WEIXIN_PBULIC = 0; //公众号
+    public static final int WEIXIN_MINI = 1; //小程序
+
 }

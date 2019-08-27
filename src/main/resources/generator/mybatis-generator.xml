@@ -26,9 +26,9 @@
 
 
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://xxx:3306/physique"
+                        connectionURL="jdbc:mysql://129.204.93.182:3306/physique"
                         userId="root"
-                        password="xxx">
+                        password="Online@)!9">
         </jdbcConnection>
 
         <javaModelGenerator targetPackage="com.hflw.physique.demo.domain" targetProject="src/main/java"/>

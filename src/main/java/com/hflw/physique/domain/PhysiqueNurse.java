@@ -1,14 +1,12 @@
 package com.hflw.physique.domain;
 
 import com.hflw.physique.common.domain.BaseEntity;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Table;
 
-@Setter
-@Getter
+@Data
 @Table(name = "pts_physique_nurse")
 public class PhysiqueNurse extends BaseEntity {
 
