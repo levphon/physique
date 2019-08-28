@@ -2,6 +2,7 @@ package com.hflw.physique.domain;
 
 import com.hflw.physique.common.domain.BaseEntity;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.Column;
 import javax.persistence.Table;
@@ -9,6 +10,7 @@ import javax.persistence.Transient;
 import java.util.List;
 
 @Data
+@EqualsAndHashCode(callSuper = false)
 @Table(name = "pts_physique")
 public class Physique extends BaseEntity {
 

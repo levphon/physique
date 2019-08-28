@@ -2,11 +2,13 @@ package com.hflw.physique.domain;
 
 import com.hflw.physique.common.domain.BaseEntity;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.Column;
 import javax.persistence.Table;
 
 @Data
+@EqualsAndHashCode(callSuper = false)
 @Table(name = "pts_user_option")
 public class UserOption extends BaseEntity {
 

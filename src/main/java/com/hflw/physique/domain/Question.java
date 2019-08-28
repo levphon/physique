@@ -2,10 +2,12 @@ package com.hflw.physique.domain;
 
 import com.hflw.physique.common.domain.BaseEntity;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.Table;
 
 @Data
+@EqualsAndHashCode(callSuper = false)
 @Table(name = "pts_question")
 public class Question extends BaseEntity {
 
