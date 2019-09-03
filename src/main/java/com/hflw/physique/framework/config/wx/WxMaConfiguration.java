@@ -20,6 +20,7 @@ import javax.annotation.PostConstruct;
 import java.io.File;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 
@@ -141,5 +142,9 @@ public class WxMaConfiguration {
 
         return null;
     };
+
+    public static Set<String> getProperties() {
+        return maServices.keySet();
+    }
 
 }

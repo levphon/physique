@@ -16,7 +16,7 @@
         <!-- 通用mapper插件 -->
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
             <!-- 此处的 MyMapper注意一定不能被扫描到-->
-            <property name="mappers" value="com.hflw.physique.common.mapper.CommonMapper"/>
+            <property name="mappers" value="com.hflw.physique.framework.mapper.CommonMapper"/>
         </plugin>
         <!-- 注释 规则-->
         <commentGenerator>

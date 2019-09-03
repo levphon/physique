@@ -10,7 +10,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @SpringBootApplication
 @EnableTransactionManagement
 @EnableCaching
-@MapperScan(basePackages = "com.hflw.physique.mapper")
+@MapperScan(basePackages = "com.hflw.physique.biz.mapper")
 public class PhysiqueApplication {
 
     public static void main(String[] args) {
