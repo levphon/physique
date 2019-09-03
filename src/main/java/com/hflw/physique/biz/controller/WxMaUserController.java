@@ -100,7 +100,7 @@ public class WxMaUserController {
      * 获取用户绑定手机号信息
      * </pre>
      */
-    @GetMapping("/udpateWxUserInfo")
+    @PostMapping("/udpateWxUserInfo")
     public PureR update(@PathVariable String appid, @RequestBody WxMaUserInfo userInfo) {
         logger.info(JsonUtils.toJson(userInfo));
         return PureR.success();
