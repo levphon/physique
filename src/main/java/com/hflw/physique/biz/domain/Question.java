@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.Table;
+import javax.persistence.Transient;
+import java.util.List;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -25,5 +27,8 @@ public class Question extends BaseEntity {
      * 排序
      */
     private Integer sort;
+
+    @Transient
+    private List<QuestionOption> options;
 
 }
