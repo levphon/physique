@@ -17,7 +17,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <mysql.version>8.0.11</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <mybatis.boot.version>2.0.1</mybatis.boot.version>
         <pagehelper.boot.version>1.2.5</pagehelper.boot.version>
         <binarywang.version>3.5.0</binarywang.version>
